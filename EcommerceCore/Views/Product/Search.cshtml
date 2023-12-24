@@ -4,7 +4,8 @@
     Layout = "_ListProduct";
 }
 
-<h1>Search</h1>
+ <h1>Search</h1>
+@*
 <h6>Có <b>@Model.Count() sản phẩm.</b></h6>
 @foreach (var item in Model)
 {
@@ -25,4 +26,5 @@
         </div>
     </div>
 
-}
+} *@
+@await Html.PartialAsync("ProductItem",Model)

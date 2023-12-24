@@ -17,6 +17,11 @@ namespace EcommerceCore.Controllers
         {
             return View();
         }
+        [Route("/404")]
+        public IActionResult TrangNotFound()
+        {
+            return View();
+        }
 
         public IActionResult Privacy()
         {
