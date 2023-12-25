@@ -6,14 +6,14 @@
 }
 <!-- Single Page Header start -->
 @section BreadCrumb {
-<div class="container-fluid page-header py-5">
-    <h1 class="text-center text-white display-6">Shop</h1>
-    <ol class="breadcrumb justify-content-center mb-0">
-        <li class="breadcrumb-item"><a href="#">Home</a></li>
-        <li class="breadcrumb-item"><a href="#">Pages</a></li>
-        <li class="breadcrumb-item active text-white">Shop</li>
-    </ol>
-</div>
+    <div class="container-fluid page-header py-5">
+        <h1 class="text-center text-white display-6">Shop</h1>
+        <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a asp-controller="Product" asp-action="Index">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Pages</a></li>
+            <li class="breadcrumb-item active text-white">Shop</li>
+        </ol>
+    </div>
 }
 <!-- Single Page Header End -->
 @* <h3>Có <b>@Model.Count() sản phẩm.</b></h3>
@@ -37,7 +37,7 @@
     </div>
 
 } *@
-@await Html.PartialAsync("ProductItem",Model)
+@await Html.PartialAsync("ProductItem", Model)
 <div class="col-12">
     <div class="pagination d-flex justify-content-center mt-5">
         <a href="#" class="rounded">&laquo;</a>
