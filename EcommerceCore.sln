@@ -6,10 +6,6 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EcommerceCore", "EcommerceCore\EcommerceCore.csproj", "{2BB6C2C6-F3D6-4C93-86C2-E2220F16AA4A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resource", "Resource", "{508B59FD-1D92-40ED-8100-6A8F4206B337}"
-	ProjectSection(SolutionItems) = preProject
-		..\..\..\Downloads\ASP.NET Core MVC (.NET 8) - E-Commerce Project.docx = ..\..\..\Downloads\ASP.NET Core MVC (.NET 8) - E-Commerce Project.docx
-		..\..\..\Downloads\vegetable-website-template.zip = ..\..\..\Downloads\vegetable-website-template.zip
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
