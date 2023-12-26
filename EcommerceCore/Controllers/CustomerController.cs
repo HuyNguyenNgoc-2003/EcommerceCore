@@ -17,7 +17,7 @@ namespace EcommerceCore.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult DangKy(RegisterVM model)
+        public IActionResult DangKy(RegisterVM model)//
         {
             if (ModelState.IsValid)
             {
