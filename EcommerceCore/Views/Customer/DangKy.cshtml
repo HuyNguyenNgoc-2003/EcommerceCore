@@ -33,9 +33,25 @@
                                 <input asp-for="@Model.HoTen" class="form-control">
                         <span asp-validation-for="@Model.HoTen" class="text-danger"></span>
                             </div>
-                    <div class="form-check my-3">
+                  @*   <div class="form-check my-3">
                         <input asp-for="@Model.GioiTinh" class="form-check-input">
                         <label class="form-check-label" for="GioiTinh">Nam?</label>
+                        
+                    </div> *@
+                    
+                        <div class="form-check my-3">
+                        <input asp-for="@Model.GioiTinh" class="form-check-input" id="gioiTinhNam">
+                        <label class="form-check-label" for="gioiTinhNam">Nam ?</label>
+                        
+                    </div>
+
+                    <div class="form-check my-3">
+                        <input asp-for="@Model.GioiTinh" class="form-check-input" id="gioiTinhNu">
+                        <label class="form-check-label" for="gioiTinhNu">Nữ ?</label>
+                    </div>
+                    <div class="form-check my-3">
+                        <input asp-for="@Model.GioiTinh" class="form-check-input" id="gioiTinhNu">
+                        <label class="form-check-label" for="gioiTinhNu">Khác ?</label>
                     </div>
 
                     <div class="form-item">

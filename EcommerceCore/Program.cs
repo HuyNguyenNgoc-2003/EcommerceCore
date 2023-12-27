@@ -1,4 +1,5 @@
 ﻿using EcommerceCore.Data;
+using EcommerceCore.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -19,7 +20,10 @@ builder.Services.AddSession(options =>
     options.Cookie.HttpOnly = true;
     options.Cookie.IsEssential = true;
 });//
-var app = builder.Build();
+// https://docs.automapper.org/en/stable/Dependency-injection.html
+builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
+//khai báo
+var app = builder.Build();//đăng ký services phải trước phần builder
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
