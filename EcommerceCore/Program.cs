@@ -1,5 +1,7 @@
 ﻿using EcommerceCore.Data;
 using EcommerceCore.Helpers;
+using EcommerceCore.ViewModels;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -22,7 +24,12 @@ builder.Services.AddSession(options =>
 });//
 // https://docs.automapper.org/en/stable/Dependency-injection.html
 builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
-//khai báo
+//khai báo service
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie(options =>
+{
+    options.LoginPath = "/Customer/DangNhap";
+    options.AccessDeniedPath = "/AccessDenied";//đã đăng nhập
+});
 var app = builder.Build();//đăng ký services phải trước phần builder
 
 // Configure the HTTP request pipeline.
@@ -38,6 +45,7 @@ app.UseStaticFiles();
 
 app.UseRouting();
 app.UseSession();//
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllerRoute(

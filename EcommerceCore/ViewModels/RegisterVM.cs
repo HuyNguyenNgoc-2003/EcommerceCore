@@ -18,8 +18,9 @@ namespace EcommerceCore.ViewModels
         [MaxLength(50, ErrorMessage = "Tối đa 50 ký tự")]
         public string HoTen { get; set; }
 
-        public bool GioiTinh { get; set; } = true;//default
-
+        // public bool GioiTinh { get; set; } = true;//default
+        [Display(Name = "Giới Tính")]
+        public bool GioiTinh { get; set; } //default
         [Display(Name ="Ngày sinh")]
         [DataType(DataType.Date)]
         public DateTime? NgaySinh { get; set; }

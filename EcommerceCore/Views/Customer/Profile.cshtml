@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewData["Title"] = "Profile";
+    Layout = "~/Views/Shared/_LayoutCustomer.cshtml";
+}
+
+<h1 class="text-primary display-6">Profile</h1>
+<div class="container">
+    <h2 class="text-primary display-6">welcome @Context.User.Identity.Name</h2>
+<a asp-action="DangXuat">Đăng Xuất</a>
+</div>

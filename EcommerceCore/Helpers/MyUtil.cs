@@ -18,7 +18,7 @@ namespace EcommerceCore.Helpers
                 }
                 return Hinh.FileName;//return nếu ko lỗi
             }
-            catch (Exception ex)
+            catch(Exception ex)
             {
                 return string.Empty;
             }
